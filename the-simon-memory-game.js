@@ -37,7 +37,7 @@ var g_GameClickBox;
 var g_DelayTimer;
 var g_RoundOverTime;
 var g_RoundTime;
-var g_Score_Top;
+var g_Score_Top = 0;
 var g_Score_Current;
 var g_Model_Current;
 
@@ -398,7 +398,8 @@ function modelUp(){
  * Set Score, lit all colors and initialize game variate
  */
 function defeatTime(){
-    g_Score_Top = g_Score_Current;
+
+    g_Score_Top = g_Score_Current>g_Score_Top? g_Score_Current: g_Score_Top;
     setScoreTop(g_Score_Top);
     flashPlate();
     gameOver();
