@@ -320,6 +320,10 @@ i {
 
 
 /* NOTE */
+/**
+ *  STATE: The following code just for show my Student Information,
+ *         Neither addition nor deletion will affect the functionality of Assignment-2
+ */
 /*The following style is about my Student card only*/
 .assignment-2 .notice-box {
     background-color: #DCAA16;
