@@ -8,11 +8,15 @@ i {
 }
 
 /*test style*/
+* {
+    /*border: none!important;*/
+}
 
 /*250, 170, 130, 40, 100*/
 
 /*element style*/
 .assignment-2 {
+    position: relative;
 }
 
 .assignment-2 .container {
@@ -32,6 +36,7 @@ i {
     height: 440px;
     position: relative;
     width: 480px;
+    user-select: none;
 }
 
 /*black circle*/
@@ -52,7 +57,7 @@ i {
 }
 
 .c-black .button-container .button-box {
-    border: solid 1px #00f;
+    /*border: solid 1px #00f;*/
     margin-top: -20px;
     position: absolute;
     text-align: center;
@@ -65,14 +70,26 @@ i {
 .text-i-record,
 .text-start,
 .text-top-record {
-    background-color: #fff;
-    border: solid 1px #0f0;
+    /*border: solid 1px #0f0;*/
     display: inline-block;
     height: 40px;
     line-height: 40px;
     margin: 0 auto;
     width: 40px;
 }
+
+.text-i-record  a,
+.text-start a,
+.text-top-record a {
+    background-color: #fff;
+    float: left;
+    font-family: Orbitron;
+    height: 100%;
+    width: 100%;
+}
+
+/*animation of start button*/
+
 
 /*record of this time*/
 .text-i-record {
@@ -99,11 +116,14 @@ i {
 }
 
 .light-box {
-    background-color: lime;
-    border: solid 1px #f00;
+    background-color: #f00;
+    /*border: solid 1px #f00;*/
     border-radius: 20px;
     height: 20px;
     width: 20px;
+}
+.light-box.on {
+    background-color: #0f0;
 }
 
 /*color box common*/
@@ -112,18 +132,23 @@ i {
 .c-blue,
 .c-yellow {
     background-color: black;
-    border: solid 1px #ff0000;
+    /*border: solid 1px #ff0000;*/
     border-radius: 170px;
     height: 170px;
     position: absolute;
     width: 170px;
 }
 
-.simon-game .c-green .plate,
-.simon-game .c-red .plate,
-.simon-game .c-blue .plate,
-.simon-game .c-yellow .plate {
-    border: solid 1px #0000ff;
+.simon-game .plate,
+.simon-game .plate.on i,
+.simon-game .plate.on-250 i,
+.simon-game .plate.on-500 i,
+.simon-game .plate.on-1000 i,
+.simon-game .plate.on-2000 i,
+.simon-game .plate.flash i,
+.simon-game .plate .mouse-plate {
+    /*border: solid 1px #0000ff;*/
+    cursor: pointer;
     border-radius: 130px;
     height: 130px;
     left: 50%;
@@ -133,13 +158,73 @@ i {
     width: 130px;
 }
 
+/*animation for plate*/
+.plate .mouse-plate{
+    content: '';
+    opacity: 0.3;
+}
+.plate.on .mouse-plate,
+.plate.on-250 .mouse-plate,
+.plate.on-500 .mouse-plate,
+.plate.on-1000 .mouse-plate,
+.plate.on-2000 .mouse-plate,
+.plate.flash .mouse-plate {
+    display: none;
+}
+
+.plate.on i,
+.plate.on-250 i,
+.plate.on-500 i,
+.plate.on-1000 i,
+.plate.on-2000 i {
+    opacity: 0.3;
+}
+
+.plate.on i{
+    /*background-color: lime;*/
+    animation: plate-light 500ms 1;
+}
+
+.plate.on-250 i {
+    animation: plate-light 200ms 1;
+}
+.plate.on-500 i {
+
+    animation: plate-light 250ms 1;
+}
+.plate.on-1000 i {
+    animation: plate-light 500ms 1;
+}
+.plate.on-2000 i {
+    animation: plate-light 1500ms 1;
+}
+
+
+.plate.flash i {
+    animation: plate-light 0.5s 5;
+    opacity: 0.3;
+}
+
+@keyframes plate-light {
+    0%{opacity: 0.3}
+    50%{opacity: 1}
+    100%{opacity: 0.3}
+}
+
+
 /*green circle*/
 .simon-game .c-green {
     left: 20px;
     top: 20px;
 }
 
-.c-green .plate {
+.c-green .plate .mouse-plate,
+.c-green .plate.flash i,
+.c-green .plate.on i,
+.c-green .plate.on-250 i,
+.c-green .plate.on-500 i,
+.c-green .plate.on-1000 i,
+.c-green .plate.on-2000 i {
     background-color: #00ff00;
 }
 
@@ -149,7 +234,13 @@ i {
     top: 20px;
 }
 
-.c-red .plate {
+.c-red .plate .mouse-plate,
+.c-red .plate.flash i,
+.c-red .plate.on i,
+.c-red .plate.on-250 i,
+.c-red .plate.on-500 i,
+.c-red .plate.on-1000 i,
+.c-red .plate.on-2000 i {
     background-color: #ff0000;
 }
 
@@ -159,7 +250,13 @@ i {
     right: 20px;
 }
 
-.c-blue .plate {
+.c-blue .plate .mouse-plate,
+.c-blue .plate.flash i,
+.c-blue .plate.on i,
+.c-blue .plate.on-250 i,
+.c-blue .plate.on-500 i,
+.c-blue .plate.on-1000 i,
+.c-blue .plate.on-2000 i {
     background-color: #0000ff;
 }
 
@@ -169,6 +266,160 @@ i {
     left: 20px;
 }
 
-.c-yellow .plate {
+.c-yellow .plate .mouse-plate,
+.c-yellow .plate.flash i,
+.c-yellow .plate.on i,
+.c-yellow .plate.on-250 i,
+.c-yellow .plate.on-500 i,
+.c-yellow .plate.on-1000 i,
+.c-yellow .plate.on-2000 i {
     background-color: #ff0;
+}
+
+/* 3d & button click*/
+.c-black {
+    /*background-color: -g #1B1B1B !important;*/
+    background-image: linear-gradient(#333, #000);
+    border: solid 2px #111 !important;
+    box-shadow: 0 3px 3px 1px #777 inset;
+}
+
+.c-green,
+.c-red,
+.c-blue,
+.c-yellow {
+    background-color: #003;
+    background-image: linear-gradient(#222, #000);
+    border: solid 1px #333 !important;
+    box-shadow: 0 1px 2px 1px #444 inset;
+}
+
+.plate .mouse-plate,
+.plate i {
+    box-shadow: -2px -3px 25px 8px hsla(0,0%,10%,0.5) inset,
+                2px 3px 4px 2px hsla(0,0%,100%,0.3) inset;
+}
+
+#score-current,
+#start,
+#score-top {
+    background-color: #bbb;
+    border-radius: 5px;
+    color: #333;
+    cursor: default;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+#start {
+    cursor: pointer;
+    /*cursor: not-allowed;*/
+
+}
+
+
+
+/* NOTE */
+/*The following style is about my Student card only*/
+.assignment-2 .notice-box {
+    background-color: #DCAA16;
+    border: solid 2px #203870;
+    bottom: 0;
+    height: 170px;
+    right: 30px;
+    position: absolute;
+    /*overflow: hidden;*/
+    width: 280px;
+}
+
+.notice-box .tit {
+    border-bottom: solid 2px #203870;
+    /*cursor: move;*/
+    height: 30px;
+    position: relative;
+}
+
+.notice-box .tit .tit-text {
+    background-color: #203870;
+    /*cursor: move;*/
+    float: left;
+    height: 34px;
+    left: -2px;
+    position: absolute;
+    text-align: left;
+    top: -2px;
+    user-select: none;
+    width: 282px;
+    z-index: 50;
+}
+
+.notice-box .tit .tit-text label {
+    color: #7E91B0;
+    /*cursor: move;*/
+    font-weight: bolder;
+    line-height: 32px;
+    padding-left: 15px;
+}
+
+.notice-box.closed {
+    height: 30px;
+}
+.notice-box.closed .tit,
+.notice-box.closed .tit .tit-text,
+.notice-box.closed .tit .tit-text label {
+    cursor: pointer;
+}
+.notice-box.closed .con {
+    display: none;
+}
+
+
+.notice-box .tit .tit-close {
+    background-color: #6E2526;
+    color: #F7E8AC;
+    cursor: pointer;
+    float: right;
+    height: 34px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    text-align: center;
+    user-select: none;
+    width: 34px;
+    z-index: 100;
+}
+
+.notice-box .tit .tit-close i {
+    font-size: 20px;
+    font-style: normal;
+    line-height: 34px;
+}
+
+.notice-box .con {
+    margin-top: 10px;
+}
+
+.notice-box .con .con-line {
+    height: 50px;
+}
+.notice-box .con .con-line .con-line-l {
+    float: left;
+    text-align: right;
+    width: 130px;
+}
+
+.notice-box .con .con-line .con-line-l label {
+    line-height:  50px;
+    color: #3C6778;
+}
+
+.notice-box .con .con-line .con-line-r {
+    float: right;
+    text-align: left;
+    width: 130px;
+}
+.notice-box .con .con-line .con-line-r label{
+    color: #3C6778;
+    font-weight: bolder;
+    line-height:  50px;
 }
