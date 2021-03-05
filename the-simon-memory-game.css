@@ -331,105 +331,105 @@ i {
  *         Neither addition nor deletion will affect the functionality of Assignment-2
  */
 /*The following style is about my Student card only*/
-.assignment-2 .notice-box {
-    background-color: #DCAA16;
-    border: solid 2px #203870;
-    bottom: 0;
-    height: 170px;
-    right: 30px;
-    position: absolute;
-    /*overflow: hidden;*/
-    width: 280px;
-}
+/*.assignment-2 .notice-box {*/
+/*    background-color: #DCAA16;*/
+/*    border: solid 2px #203870;*/
+/*    bottom: 0;*/
+/*    height: 170px;*/
+/*    right: 30px;*/
+/*    position: absolute;*/
+/*    !*overflow: hidden;*!*/
+/*    width: 280px;*/
+/*}*/
 
-.notice-box .tit {
-    border-bottom: solid 2px #203870;
-    /*cursor: move;*/
-    height: 30px;
-    position: relative;
-}
+/*.notice-box .tit {*/
+/*    border-bottom: solid 2px #203870;*/
+/*    !*cursor: move;*!*/
+/*    height: 30px;*/
+/*    position: relative;*/
+/*}*/
 
-.notice-box .tit .tit-text {
-    background-color: #203870;
-    /*cursor: move;*/
-    float: left;
-    height: 34px;
-    left: -2px;
-    position: absolute;
-    text-align: left;
-    top: -2px;
-    user-select: none;
-    width: 282px;
-    z-index: 50;
-}
+/*.notice-box .tit .tit-text {*/
+/*    background-color: #203870;*/
+/*    !*cursor: move;*!*/
+/*    float: left;*/
+/*    height: 34px;*/
+/*    left: -2px;*/
+/*    position: absolute;*/
+/*    text-align: left;*/
+/*    top: -2px;*/
+/*    user-select: none;*/
+/*    width: 282px;*/
+/*    z-index: 50;*/
+/*}*/
 
-.notice-box .tit .tit-text label {
-    color: #7E91B0;
-    /*cursor: move;*/
-    font-weight: bolder;
-    line-height: 32px;
-    padding-left: 15px;
-}
+/*.notice-box .tit .tit-text label {*/
+/*    color: #7E91B0;*/
+/*    !*cursor: move;*!*/
+/*    font-weight: bolder;*/
+/*    line-height: 32px;*/
+/*    padding-left: 15px;*/
+/*}*/
 
-.notice-box.closed {
-    height: 30px;
-}
-.notice-box.closed .tit,
-.notice-box.closed .tit .tit-text,
-.notice-box.closed .tit .tit-text label {
-    cursor: pointer;
-}
-.notice-box.closed .con {
-    display: none;
-}
+/*.notice-box.closed {*/
+/*    height: 30px;*/
+/*}*/
+/*.notice-box.closed .tit,*/
+/*.notice-box.closed .tit .tit-text,*/
+/*.notice-box.closed .tit .tit-text label {*/
+/*    cursor: pointer;*/
+/*}*/
+/*.notice-box.closed .con {*/
+/*    display: none;*/
+/*}*/
 
 
-.notice-box .tit .tit-close {
-    background-color: #6E2526;
-    color: #F7E8AC;
-    cursor: pointer;
-    float: right;
-    height: 34px;
-    position: absolute;
-    right: -2px;
-    top: -2px;
-    text-align: center;
-    user-select: none;
-    width: 34px;
-    z-index: 100;
-}
+/*.notice-box .tit .tit-close {*/
+/*    background-color: #6E2526;*/
+/*    color: #F7E8AC;*/
+/*    cursor: pointer;*/
+/*    float: right;*/
+/*    height: 34px;*/
+/*    position: absolute;*/
+/*    right: -2px;*/
+/*    top: -2px;*/
+/*    text-align: center;*/
+/*    user-select: none;*/
+/*    width: 34px;*/
+/*    z-index: 100;*/
+/*}*/
 
-.notice-box .tit .tit-close i {
-    font-size: 20px;
-    font-style: normal;
-    line-height: 34px;
-}
+/*.notice-box .tit .tit-close i {*/
+/*    font-size: 20px;*/
+/*    font-style: normal;*/
+/*    line-height: 34px;*/
+/*}*/
 
-.notice-box .con {
-    margin-top: 10px;
-}
+/*.notice-box .con {*/
+/*    margin-top: 10px;*/
+/*}*/
 
-.notice-box .con .con-line {
-    height: 50px;
-}
-.notice-box .con .con-line .con-line-l {
-    float: left;
-    text-align: right;
-    width: 130px;
-}
+/*.notice-box .con .con-line {*/
+/*    height: 50px;*/
+/*}*/
+/*.notice-box .con .con-line .con-line-l {*/
+/*    float: left;*/
+/*    text-align: right;*/
+/*    width: 130px;*/
+/*}*/
 
-.notice-box .con .con-line .con-line-l label {
-    line-height:  50px;
-    color: #3C6778;
-}
+/*.notice-box .con .con-line .con-line-l label {*/
+/*    line-height:  50px;*/
+/*    color: #3C6778;*/
+/*}*/
 
-.notice-box .con .con-line .con-line-r {
-    float: right;
-    text-align: left;
-    width: 130px;
-}
-.notice-box .con .con-line .con-line-r label{
-    color: #3C6778;
-    font-weight: bolder;
-    line-height:  50px;
-}
+/*.notice-box .con .con-line .con-line-r {*/
+/*    float: right;*/
+/*    text-align: left;*/
+/*    width: 130px;*/
+/*}*/
+/*.notice-box .con .con-line .con-line-r label{*/
+/*    color: #3C6778;*/
+/*    font-weight: bolder;*/
+/*    line-height:  50px;*/
+/*}*/

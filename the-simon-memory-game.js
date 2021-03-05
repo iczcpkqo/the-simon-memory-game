@@ -119,7 +119,7 @@ function startClick(){
     startButton.innerHTML = __STATUS_TEXT__.playing;
     startButton.style.cursor = 'not-allowed';
 
-    document.getElementById('score-current').innerHTML = '00';
+    // document.getElementById('score-current').innerHTML = '00';
 
     /**
      * Game will start after __START_WAIT__ seconds later.
@@ -343,7 +343,7 @@ function hiddenMousePlate(obj) {
  */
 function addScoreCurrent(){
     g_Score_Current++;
-    setScoreCurrent(g_Score_Current);
+    // setScoreCurrent(g_Score_Current);
 }
 
 /**
@@ -401,6 +401,7 @@ function defeatTime(){
 
     g_Score_Top = g_Score_Current>g_Score_Top? g_Score_Current: g_Score_Top;
     setScoreTop(g_Score_Top);
+    setScoreCurrent(g_Score_Current);
     flashPlate();
     gameOver();
 }
@@ -457,17 +458,17 @@ function gameOver(){
  *         Neither addition nor deletion will affect the functionality of Assignment-2
  */
 /*The following JS is about my Student card only*/
-var titBar = document.getElementById("tit-bar");
-titBar.addEventListener("click", expandWindow);
-// close
-var titClose = document.getElementById("tit-close");
-titClose.addEventListener("click", foldWindow);
-
-setTimeout(expandWindow,3000);
-function expandWindow(){
-    document.getElementById("notice-box").classList.remove("closed");
-}
-function foldWindow(){
-    document.getElementById("notice-box").classList.add("closed");
-}
+// var titBar = document.getElementById("tit-bar");
+// titBar.addEventListener("click", expandWindow);
+// // close
+// var titClose = document.getElementById("tit-close");
+// titClose.addEventListener("click", foldWindow);
+//
+// setTimeout(expandWindow,3000);
+// function expandWindow(){
+//     document.getElementById("notice-box").classList.remove("closed");
+// }
+// function foldWindow(){
+//     document.getElementById("notice-box").classList.add("closed");
+// }
 // NOTE END
